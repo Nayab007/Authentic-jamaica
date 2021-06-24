@@ -1,6 +1,7 @@
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image'
+import Skeleton from '../../components/Skeleton'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -20,7 +21,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -28,18 +29,27 @@ export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
     content_type: 'recipe',
     'fields.slug': params.slug
-  })
+  }) 
+
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
 
   return {
     props: { recipe: items[0] },
     revalidate: 1
   }
-
 }
 
 export default function RecipeDetails({ recipe }) {
+  if (!recipe) return <Skeleton />
+
   const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
-  console.log(method)
 
   return (
     <div>
@@ -67,15 +77,12 @@ export default function RecipeDetails({ recipe }) {
       </div>
 
       <style jsx>{`
-        h3 {
+        h2,h3 {
           text-transform: uppercase;
-          color: 	black
         }
         .banner h2 {
           margin: 0;
-          color: white;
-          text-transform: uppercase;
-          background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+          background: #fff;
           display: inline-block;
           padding: 20px;
           position: relative;
@@ -86,7 +93,6 @@ export default function RecipeDetails({ recipe }) {
         }
         .info p {
           margin: 0;
-          
         }
         .info span::after {
           content: ", ";
