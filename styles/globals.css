@@ -6,6 +6,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.5em;  
 }
+
 .layout {
   min-height: 100vh;
   display: flex;
@@ -43,7 +44,7 @@ header h2 {
 footer {
   background: #111;
   color: #bbb;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   margin-top: auto
 }

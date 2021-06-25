@@ -1,4 +1,9 @@
-export default function Skeleton() {
+
+
+
+
+
+  export default function Skeleton() {
     return (
       <div className="skeleton">
         <div className="s-banner"></div>
@@ -13,7 +18,7 @@ export default function Skeleton() {
             margin: 20px auto;
           }
           .skeleton > div {
-            background: #dbcc1a;
+            background: gray;
             border-radius: 4px;
             margin: 20px 0;
           }
