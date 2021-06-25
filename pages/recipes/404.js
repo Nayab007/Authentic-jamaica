@@ -14,8 +14,8 @@ const NotFound = () => {
   return (
     <div className="not-found">
       <h1>404</h1>
-      <h2>Oops!  page cannot be found :(</h2>
-      <p>Redirecting to <Link href="/"><a>Homepage</a></Link> for more marmite goodness...</p>
+      <h2>Oops!  page cannot be found </h2>
+      <p>Redirecting to <Link href="/"><a>Authentic Jamaica</a></Link>Spread The Joy</p>
 
       <style jsx>{`
         .not-found {
