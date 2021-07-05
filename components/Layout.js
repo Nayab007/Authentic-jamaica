@@ -11,7 +11,7 @@ export default function Layout({ children }) {
               <span>Jamaica</span>
             </h1>
             <h2>Spread The Joy <br/>
-            Call or SMS to place you orde today <br/>
+            Call or SMS to place your order today <br/>
              <h3>(700964819) or (0722874311)</h3>
             </h2>
           </a>
