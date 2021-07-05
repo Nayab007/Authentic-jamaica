@@ -10,7 +10,10 @@ export default function Layout({ children }) {
               <span>Authentic</span>
               <span>Jamaica</span>
             </h1>
-            <h2>Spread The Joy</h2>
+            <h2>Spread The Joy <br/>
+            Call or SMS to place you orde today <br/>
+             <h3>(700964819) or (0722874311)</h3>
+            </h2>
           </a>
         </Link>
       </header>
@@ -20,7 +23,10 @@ export default function Layout({ children }) {
       </div>
 
       <footer>
-        <p>Copyright 2021 Authentic Jamaica</p>
+        <p>Copyright 2021 Authentic Jamaica <br/>
+         <h3>Call today to place an order : <br/>
+         (700964819) or (0722874311)</h3>
+        </p>
       </footer>
     </div>
   )
