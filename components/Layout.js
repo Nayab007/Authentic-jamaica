@@ -25,7 +25,7 @@ export default function Layout({ children }) {
       <footer>
         <p>Copyright 2021 Authentic Jamaica <br/>
          <h3>Call today to place an order : <br/>
-         (700964819) or (0722874311)</h3>
+         (0700964819) or (0722874311)</h3>
         </p>
       </footer>
     </div>
