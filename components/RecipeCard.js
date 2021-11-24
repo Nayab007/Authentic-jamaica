@@ -28,7 +28,7 @@ export default function RecipeCard({ recipe }) {
           transform: rotateZ(1deg);
         }
         .content {
-          background: #fff;
+          background: #ffffff;
           box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
           margin: 0;
           position: relative;
