@@ -89,7 +89,7 @@ export default function RecipeDetails({ recipe }) {
           top: -60px;
           left: -10px;
           transform: rotateZ(-1deg);
-          box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+          box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
         }
         .info p {
           margin: 0;
