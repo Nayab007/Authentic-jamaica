@@ -22,7 +22,7 @@ export default function NotFound ()  {
       <style jsx>{`
         .not-found {
           background: #b1f2ff;
-          padding: 20px;
+          padding: 10px;
           box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
           transform: rotateZ(-1deg);
         }
